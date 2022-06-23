@@ -1,0 +1,72 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 2 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\admin\source\repos\InheritIL\InheritIL\bin\Release\net6.0\6f378090-1ccf-4f52-a3f9-7e380f1205c6
+// command took 1.74s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\admin\source\repos\InheritIL\InheritIL\bin\Release\net6.0\6f378090-1ccf-4f52-a3f9-7e380f1205c6
+// command took 12.38s and exited with 1
+// start dotnet build -c Release  --no-restore --no-dependencies /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 /p:Deterministic=true /p:Optimize=true in C:\Users\admin\source\repos\InheritIL\InheritIL\bin\Release\net6.0\6f378090-1ccf-4f52-a3f9-7e380f1205c6
+// command took 2.51s and exited with 0
+// ***** Done, took 00:00:16 (16.95 sec)   *****
+// Found 2 benchmarks:
+//   Benchmarker.GenTypeWithReflection: DefaultJob
+//   Benchmarker.CreateNormally: DefaultJob
+
+// **************************
+// Benchmark: Benchmarker.GenTypeWithReflection: DefaultJob
+// *** Execute ***
+// Launch: 1 / 1
+// Execute: dotnet "6f378090-1ccf-4f52-a3f9-7e380f1205c6.dll" --benchmarkName "InheritIL.Benchmarker.GenTypeWithReflection" --job "Default" --benchmarkId 0 in C:\Users\admin\source\repos\InheritIL\InheritIL\bin\Release\net6.0\6f378090-1ccf-4f52-a3f9-7e380f1205c6\bin\Release\net6.0
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET 6.0.5 (6.0.522.21309), X64 RyuJIT
+// GC=Concurrent Workstation
+// Job: DefaultJob
+
+OverheadJitting  1: 1 op, 304600.00 ns, 304.6000 us/op
+WorkloadJitting  1: 1 op, 5518100.00 ns, 5.5181 ms/op
+
+OverheadJitting  2: 16 op, 515100.00 ns, 32.1938 us/op
+WorkloadJitting  2: 16 op, 3267000.00 ns, 204.1875 us/op
+
+WorkloadPilot    1: 16 op, 2540600.00 ns, 158.7875 us/op
+WorkloadPilot    2: 32 op, 4513400.00 ns, 141.0437 us/op
+WorkloadPilot    3: 64 op, 10662800.00 ns, 166.6062 us/op
+WorkloadPilot    4: 128 op, 17749800.00 ns, 138.6703 us/op
+WorkloadPilot    5: 256 op, 37346200.00 ns, 145.8836 us/op
+WorkloadPilot    6: 512 op, 76270100.00 ns, 148.9650 us/op
+WorkloadPilot    7: 1024 op, 153636800.00 ns, 150.0359 us/op
+WorkloadPilot    8: 2048 op, 346152400.00 ns, 169.0197 us/op
+WorkloadPilot    9: 4096 op, 713632100.00 ns, 174.2266 us/op
+
+OverheadWarmup   1: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadWarmup   2: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadWarmup   3: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadWarmup   4: 4096 op, 16100.00 ns, 3.9307 ns/op
+OverheadWarmup   5: 4096 op, 16400.00 ns, 4.0039 ns/op
+OverheadWarmup   6: 4096 op, 15700.00 ns, 3.8330 ns/op
+
+OverheadActual   1: 4096 op, 16800.00 ns, 4.1016 ns/op
+OverheadActual   2: 4096 op, 15900.00 ns, 3.8818 ns/op
+OverheadActual   3: 4096 op, 16300.00 ns, 3.9795 ns/op
+OverheadActual   4: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadActual   5: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadActual   6: 4096 op, 15700.00 ns, 3.8330 ns/op
+OverheadActual   7: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadActual   8: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadActual   9: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadActual  10: 4096 op, 15700.00 ns, 3.8330 ns/op
+OverheadActual  11: 4096 op, 16800.00 ns, 4.1016 ns/op
+OverheadActual  12: 4096 op, 16000.00 ns, 3.9062 ns/op
+OverheadActual  13: 4096 op, 15800.00 ns, 3.8574 ns/op
+OverheadActual  14: 4096 op, 15600.00 ns, 3.8086 ns/op
+OverheadActual  15: 4096 op, 15900.00 ns, 3.8818 ns/op
+
+WorkloadWarmup   1: 4096 op, 789438800.00 ns, 192.7341 us/op
+WorkloadWarmup   2: 4096 op, 911983600.00 ns, 222.6522 us/op
+WorkloadWarmup   3: 4096 op, 1009859400.00 ns, 246.5477 us/op
+WorkloadWarmup   4: 4096 op, 1152306300.00 ns, 281.3248 us/op
+WorkloadWarmup   5: 4096 op, 1231111600.00 ns, 300.5644 us/op
+WorkloadWarmup   6:
